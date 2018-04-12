@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.hua.maven</groupId>
+		<artifactId>maven-project-template-entire</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>maven-project-template-dao</artifactId>
+	<packaging>jar</packaging>
+	<name>maven-project-template-dao</name>
+
+	<!-- 公共属性 -->
+	<properties>
+
+	</properties>
+
+	<!-- -->
+	<dependencies>
+
+		<!-- local dependency -->
+		<dependency>
+			<groupId>com.hua.maven</groupId>
+			<artifactId>maven-project-template-common</artifactId>
+			<version>${maven-project-template-common.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.hua.maven</groupId>
+			<artifactId>maven-project-template-domain</artifactId>
+			<version>${maven-project-template-domain.version}</version>
+		</dependency>
+
+	</dependencies>
+
+</project>

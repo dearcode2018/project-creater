@@ -1,0 +1,55 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.wehotel.store.pass</groupId>
+		<artifactId>store-pass-entire</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>store-pass-portals</artifactId>
+	<name>store-pass-portals</name>
+	<packaging>war</packaging>
+
+	<!-- 公共属性 -->
+	<properties>
+
+	</properties>
+
+	<!-- war构建 -->
+	<build>
+
+		<finalName>store-pass-portals</finalName>
+		<plugins>
+
+		</plugins>
+
+		<!-- 配置文件过滤器 -->
+		<filters>
+			<filter>src/main/resources/filter/filter-${env}.properties</filter>
+		</filters>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<!-- 排除指定的目录，排除过滤器文件 -->
+				<excludes>
+					<exclude>*/*-${env}.properties</exclude>
+				</excludes>
+			</resource>
+		</resources>
+
+	</build>
+
+	<!-- -->
+	<dependencies>
+
+		<!-- local dependency -->
+		<dependency>
+			<groupId>com.wehotel.store.pass</groupId>
+			<artifactId>store-pass-service</artifactId>
+			<version>${store-pass-service.version}</version>
+		</dependency>
+
+	</dependencies>
+
+</project>
